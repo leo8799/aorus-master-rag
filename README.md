@@ -2,18 +2,19 @@
 
 針對 GIGABYTE AORUS MASTER 16 AM6H 官方規格表的輕量 RAG 問答系統。核心邏輯包含 chunking、vector index、retrieval、prompting、streaming generation 與 TTFT/TPS benchmark，全部以純 Python 撰寫，沒有使用 LangChain 或 LlamaIndex。
 
+由於測驗情境為消費級筆電 AI 助手：所以我就預設在Windows環境下（如果是Linux的話，下面啟動命令的換行符要換成\），所以啟動命令主要是Windows PowerShell的命令。
+
 資料來源：GIGABYTE Taiwan 官方規格頁 `https://www.gigabyte.com/tw/Laptop/AORUS-MASTER-16-AM6H/sp`，擷取日期 `2026-06-12`。
 
-## Design
+## Quick Start
 
-- 環境管理：`uv`
-- 推論引擎：`llama-cpp-python`
-- 建議模型：`Qwen2.5-3B-Instruct-Q4_K_M.gguf`
-- 4GB VRAM 策略：使用 3B GGUF 4-bit 量化，embedding 預設使用 CPU hashing vector
-- 問答語言：支援繁體中文與英文混合提問
-- 資料結構：規格表以 key-value 保存，並將 `BXH/BYH/BZH` 三個子型號分開建模
+進入專案：
 
-## Install
+```powershell
+cd aorus-master-rag
+```
+
+安裝 Python 依賴：
 
 ```powershell
 uv sync --extra dev
@@ -39,13 +40,73 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install-llama-cpp-cu122.ps1
 uv sync --extra dev --extra generation
 ```
 
-## Models
+模型檔不提交到 Git，請從 Hugging Face 下載建議模型：
 
-建議放入：
+- Model page: `https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF`
+- Suggested file: `qwen2.5-3b-instruct-q4_k_m.gguf`
+- Local path: `models/qwen2.5-3b-instruct-q4_k_m.gguf`
+
+直接檔案頁面：`https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/blob/main/qwen2.5-3b-instruct-q4_k_m.gguf`
+
+查詢：
+
+```powershell
+uv run aorus-rag ask `
+  --model-path models/qwen2.5-3b-instruct-q4_k_m.gguf `
+  --gpu-layers -1 `
+  --ctx-size 2048 `
+  --question "BYH 的顯卡和 VRAM 是多少？"
+```
+
+只看檢索結果：
+
+```powershell
+uv run aorus-rag retrieve --question "Which model has RTX 5070 Ti and what is its MGP?"
+```
+
+Retrieval benchmark：
+
+```powershell
+uv run aorus-rag eval --mode retrieval
+```
+
+Generation benchmark，進度條會顯示在 stderr，JSON 結果輸出到 stdout：
+
+```powershell
+uv run aorus-rag eval `
+  --mode generation `
+  --model-path models/qwen2.5-3b-instruct-q4_k_m.gguf `
+  --gpu-layers -1 `
+  --ctx-size 2048 `
+  --max-tokens 180 `
+  --chat-format chatml
+```
+
+## Current Results
+
+`Qwen2.5-3B-Instruct Q4_K_M` GPU benchmark：
+
+- Average TTFT: `0.319 s`
+- Average TPS: `85.61 tokens/s`
+- Fact coverage: `6/6`
+- Retrieval benchmark: `field/model/fact recall = 1.0`, `mrr = 1.0`
+- Approx llama.cpp GPU buffers: `2.16 GiB`, under the 4GB VRAM target
+
+完整報告：
 
 ```text
-models/qwen2.5-3b-instruct-q4_k_m.gguf
+benchmark-results/qwen2.5-3b-q4km-gpu-quality-summary.md
 ```
+
+## Design Summary
+
+- 環境管理：`uv`
+- 推論引擎：`llama-cpp-python`
+- 建議模型：`Qwen2.5-3B-Instruct-Q4_K_M.gguf`
+- 4GB VRAM 策略：使用 3B GGUF 4-bit 量化，embedding 預設使用 CPU hashing vector
+- 問答語言：支援繁體中文與英文混合提問
+- 資料結構：規格表以 key-value 保存，並將 `BXH/BYH/BZH` 三個子型號分開建模
+- 使用介面：CLI only，沒有 HTTP API/server
 
 ## Why This Model
 
@@ -156,57 +217,6 @@ field_recall_at_k = 1.0
 model_recall_at_k = 1.0
 fact_recall_at_k  = 1.0
 mrr               = 1.0
-```
-
-## Commands
-
-查詢：
-
-```powershell
-uv run aorus-rag ask `
-  --model-path models/qwen2.5-3b-instruct-q4_k_m.gguf `
-  --gpu-layers -1 `
-  --ctx-size 2048 `
-  --question "BYH 的顯卡和 VRAM 是多少？"
-```
-
-只看檢索結果：
-
-```powershell
-uv run aorus-rag retrieve --question "Which model has RTX 5070 Ti and what is its MGP?"
-```
-
-Retrieval benchmark：
-
-```powershell
-uv run aorus-rag eval --mode retrieval
-```
-
-Generation benchmark，會在 stderr 顯示進度條，JSON 結果輸出到 stdout：
-
-```powershell
-uv run aorus-rag eval `
-  --mode generation `
-  --model-path models/qwen2.5-3b-instruct-q4_k_m.gguf `
-  --gpu-layers -1 `
-  --ctx-size 2048 `
-  --max-tokens 180 `
-  --chat-format chatml
-```
-
-## Current Results
-
-`Qwen2.5-3B-Instruct Q4_K_M` GPU benchmark：
-
-- Average TTFT: `0.319 s`
-- Average TPS: `85.61 tokens/s`
-- Fact coverage: `6/6`
-- Retrieval benchmark: `field/model/fact recall = 1.0`, `mrr = 1.0`
-
-完整報告：
-
-```text
-benchmark-results/qwen2.5-3b-q4km-gpu-quality-summary.md
 ```
 
 ## Layout
