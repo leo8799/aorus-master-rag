@@ -106,7 +106,6 @@ benchmark-results/qwen2.5-3b-q4km-gpu-quality-summary.md
 - 4GB VRAM 策略：使用 3B GGUF 4-bit 量化，embedding 預設使用 CPU hashing vector
 - 問答語言：支援繁體中文與英文混合提問
 - 資料結構：規格表以 key-value 保存，並將 `BXH/BYH/BZH` 三個子型號分開建模
-- 使用介面：CLI only，沒有 HTTP API/server
 
 ## Why This Model
 
