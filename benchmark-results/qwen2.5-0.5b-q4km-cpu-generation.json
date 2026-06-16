@@ -1,0 +1,119 @@
+﻿{
+  "cases": 6,
+  "rows": [
+    {
+      "question": "BYH 的顯卡和 VRAM 是多少？",
+      "answer": "- 显卡: NVIDIA GeForce RTX 5080, 16GB GDDR7\n- VRAM: 175W",
+      "metrics": {
+        "question": "BYH 的顯卡和 VRAM 是多少？",
+        "retrieved_doc_ids": [
+          "aorus-master-16-byh::顯示晶片",
+          "aorus-master-16-byh::顯示器",
+          "aorus-master-16-byh::作業系統",
+          "aorus-master-16-byh::音效",
+          "aorus-master-16-byh::中央處理器"
+        ],
+        "ttft_seconds": 4.236531000118703,
+        "total_seconds": 4.853261599782854,
+        "generated_tokens": 32,
+        "tokens_per_second": 51.8865125509031,
+        "answer_chars": 54
+      }
+    },
+    {
+      "question": "Which model has RTX 5070 Ti and what is its maximum graphics power?",
+      "answer": "- Model: AORUS MASTER 16 AM6H\n- RTX 5070 Ti: 12GB GDDR7, 140W Maximum Graphics Power with Dynamic Boost. AI Boost: 1962 MHz (1762 MHz Boost Clock + 200 MHz OC). May vary by scenario.",
+      "metrics": {
+        "question": "Which model has RTX 5070 Ti and what is its maximum graphics power?",
+        "retrieved_doc_ids": [
+          "aorus-master-16-bzh::顯示晶片",
+          "aorus-master-16-bzh::summary",
+          "aorus-master-16-bzh::變壓器",
+          "aorus-master-16-bzh::電池",
+          "aorus-master-16-bzh::視訊鏡頭"
+        ],
+        "ttft_seconds": 3.957517799921334,
+        "total_seconds": 5.35693270014599,
+        "generated_tokens": 74,
+        "tokens_per_second": 52.87924259497335,
+        "answer_chars": 182
+      }
+    },
+    {
+      "question": "這台筆電的螢幕解析度、更新率與亮度是多少？",
+      "answer": "- 畫板解析度: 16:10 OLED WQXGA (2560x1600)\n- 更新率: 240Hz\n- 亮度: 1,000,000:1",
+      "metrics": {
+        "question": "這台筆電的螢幕解析度、更新率與亮度是多少？",
+        "retrieved_doc_ids": [
+          "aorus-master-16-bxh::顯示器",
+          "aorus-master-16-byh::顯示器",
+          "aorus-master-16-bzh::顯示器",
+          "aorus-master-16-bxh::電池",
+          "aorus-master-16-byh::電池"
+        ],
+        "ttft_seconds": 4.188653400167823,
+        "total_seconds": 5.316683300305158,
+        "generated_tokens": 56,
+        "tokens_per_second": 49.6440741448273,
+        "answer_chars": 68
+      }
+    },
+    {
+      "question": "How many Thunderbolt ports are listed and which versions are they?",
+      "answer": "- Thunderbolt ports: 1 x Type-A support USB3.2 Gen2, 1 x Type-C with Thunderbolt 5 supporting USB4, DisplayPort 2.1 and Power Delivery 3.0.\n- Thunderbolt versions: Thunderbolt 5, Thunderbolt 4",
+      "metrics": {
+        "question": "How many Thunderbolt ports are listed and which versions are they?",
+        "retrieved_doc_ids": [
+          "aorus-master-16-bxh::連接埠",
+          "aorus-master-16-byh::連接埠",
+          "aorus-master-16-bzh::連接埠",
+          "aorus-master-16-bxh::重量",
+          "aorus-master-16-byh::重量"
+        ],
+        "ttft_seconds": 4.668784799985588,
+        "total_seconds": 5.8350793002173305,
+        "generated_tokens": 60,
+        "tokens_per_second": 51.44498236772787,
+        "answer_chars": 192
+      }
+    },
+    {
+      "question": "電池容量和變壓器瓦數？",
+      "answer": "- 電池容量: Li-ion 99Wh\n- 变壓器瓦數: 330W AC Adapter",
+      "metrics": {
+        "question": "電池容量和變壓器瓦數？",
+        "retrieved_doc_ids": [
+          "aorus-master-16-bxh::變壓器",
+          "aorus-master-16-byh::變壓器",
+          "aorus-master-16-bzh::變壓器",
+          "aorus-master-16-bxh::電池",
+          "aorus-master-16-byh::電池"
+        ],
+        "ttft_seconds": 2.923534299712628,
+        "total_seconds": 3.4608017997816205,
+        "generated_tokens": 29,
+        "tokens_per_second": 53.97683648513266,
+        "answer_chars": 44
+      }
+    },
+    {
+      "question": "Compare BXH, BYH and BZH GPU memory.",
+      "answer": "- BXH: 24GB GDDR7\n- BYH: 16GB GDDR7\n- BZH: 12GB GDDR7",
+      "metrics": {
+        "question": "Compare BXH, BYH and BZH GPU memory.",
+        "retrieved_doc_ids": [
+          "aorus-master-16-bxh::顯示晶片",
+          "aorus-master-16-byh::顯示晶片",
+          "aorus-master-16-bzh::顯示晶片",
+          "aorus-master-16-byh::summary",
+          "aorus-master-16-bxh::summary"
+        ],
+        "ttft_seconds": 5.278392400126904,
+        "total_seconds": 5.960925100371242,
+        "generated_tokens": 35,
+        "tokens_per_second": 51.27959435126036,
+        "answer_chars": 53
+      }
+    }
+  ]
+}

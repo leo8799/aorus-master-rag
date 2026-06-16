@@ -1,0 +1,73 @@
+{
+  "product": {
+    "name": "AORUS MASTER 16 AM6H",
+    "listed_models": [
+      "AORUS MASTER 16 BXH",
+      "AORUS MASTER 16 BYH",
+      "AORUS MASTER 16 BZH"
+    ],
+    "source_url": "https://www.gigabyte.com/tw/Laptop/AORUS-MASTER-16-AM6H/sp",
+    "source_accessed": "2026-06-12",
+    "source_note": "Official GIGABYTE Taiwan product specification page. Specs may vary by country and region."
+  },
+  "field_aliases": {
+    "作業系統": ["OS", "operating system", "Windows", "系統"],
+    "中央處理器": ["CPU", "processor", "Core Ultra", "處理器"],
+    "顯示晶片": ["GPU", "graphics", "graphics card", "顯卡", "顯示卡", "VRAM", "GDDR7", "TGP", "MGP", "AI Boost", "Dynamic Boost"],
+    "顯示器": ["display", "screen", "panel", "OLED", "螢幕", "解析度", "更新率", "refresh rate", "nits", "亮度"],
+    "記憶體": ["memory", "RAM", "DDR5", "SO-DIMM", "記憶體容量"],
+    "儲存裝置": ["storage", "SSD", "NVMe", "M.2", "PCIe", "硬碟", "儲存"],
+    "鍵盤種類": ["keyboard", "RGB", "key travel", "鍵盤"],
+    "連接埠": ["ports", "I/O", "IO", "USB", "Thunderbolt", "HDMI", "RJ-45", "MicroSD", "Audio Jack", "連接孔", "接口"],
+    "音效": ["audio", "speaker", "speakers", "Dolby Atmos", "Smart Amp", "喇叭", "麥克風"],
+    "通訊": ["wireless", "network", "Wi-Fi", "WIFI", "Bluetooth", "LAN", "網路", "藍牙"],
+    "視訊鏡頭": ["webcam", "camera", "IR", "Windows Hello", "鏡頭", "攝影機"],
+    "安全裝置": ["security", "TPM", "PTT", "安全"],
+    "電池": ["battery", "Wh", "電量"],
+    "變壓器": ["adapter", "charger", "power adapter", "AC adapter", "充電器", "電源"],
+    "尺寸": ["dimensions", "size", "mm", "機身尺寸"],
+    "重量": ["weight", "kg", "重量"],
+    "顏色": ["color", "colour", "Dark Tide", "顏色"]
+  },
+  "common_specs": {
+    "作業系統": "Windows 11 Pro (GIGABYTE recommends Windows 11 Pro for business.)\nWindows 11 Home\nUEFI Shell OS",
+    "中央處理器": "Intel Core Ultra 9 Processor 275HX (36MB cache, up to 5.4 GHz, 24 cores, 24 threads)",
+    "顯示器": "16 inch 16:10 OLED WQXGA (2560x1600) 240Hz, 1ms, DCI-P3 100%, 500 nits peak, 1,000,000:1 contrast. Supports NVIDIA G-SYNC, NVIDIA Advanced Optimus, VESA DisplayHDR True Black 500, VESA ClearMR 10000, Pantone Validated, TUV Rheinland Low Blue Light, and Dolby Vision.",
+    "記憶體": "Up to 64GB DDR5 5600MHz. 2x SO-DIMM sockets for expansion.",
+    "儲存裝置": "1x PCIe Gen5 M.2 slot, 1x PCIe Gen4x4 M.2 slot, up to 4TB PCIe NVMe M.2 SSD. Storage capacity may differ by country and region.",
+    "鍵盤種類": "3-zone RGB Backlit Keyboard, up to 1.7mm key-travel, supports N-Key.",
+    "連接埠": "Left side: 1 x DC in, 1 x RJ-45, 1 x HDMI 2.1, 1 x Type-A support USB3.2 Gen2, 1 x Type-C with Thunderbolt 5 supporting USB4, DisplayPort 2.1 and Power Delivery 3.0.\nRight side: 1 x Type-A support USB3.2 Gen2, 1 x Type-C with Thunderbolt 4 supporting USB4, DisplayPort 1.4 and Power Delivery 3.0, 1 x MicroSD (UHS-II), 1 x Audio Jack support mic/headphone combo.",
+    "音效": "4x 2W speakers, microphone, Dolby Atmos, Smart Amp Technology.",
+    "通訊": "WIFI 7 (802.11be 2x2), LAN: 1G, Bluetooth v5.4.",
+    "視訊鏡頭": "FHD (1080p) IR Webcam, built-in array microphone, supports Windows Hello Face Authentication.",
+    "安全裝置": "Firmware-based TPM, supports Intel Platform Trust Technology (Intel PTT).",
+    "電池": "Li-ion 99Wh.",
+    "變壓器": "330W AC Adapter.",
+    "尺寸": "357 x 254 x 23~29.9 mm. Dimensions may vary according to configuration, manufacturing process and measurement method.",
+    "重量": "Approximately 2.5 kg. Weight may vary according to configuration, manufacturing process and measurement method.",
+    "顏色": "Dark Tide."
+  },
+  "variants": [
+    {
+      "model": "AORUS MASTER 16 BXH",
+      "aliases": ["BXH", "5090", "RTX 5090", "GeForce RTX 5090"],
+      "variant_specs": {
+        "顯示晶片": "NVIDIA GeForce RTX 5090 Laptop GPU, 24GB GDDR7, 175W Maximum Graphics Power with Dynamic Boost. AI Boost: 1797 MHz (1597 MHz Boost Clock + 200 MHz OC). May vary by scenario."
+      }
+    },
+    {
+      "model": "AORUS MASTER 16 BYH",
+      "aliases": ["BYH", "5080", "RTX 5080", "GeForce RTX 5080"],
+      "variant_specs": {
+        "顯示晶片": "NVIDIA GeForce RTX 5080 Laptop GPU, 16GB GDDR7, 175W Maximum Graphics Power with Dynamic Boost. AI Boost: 1902 MHz (1702 MHz Boost Clock + 200 MHz OC). May vary by scenario."
+      }
+    },
+    {
+      "model": "AORUS MASTER 16 BZH",
+      "aliases": ["BZH", "5070 Ti", "RTX 5070 Ti", "GeForce RTX 5070 Ti"],
+      "variant_specs": {
+        "顯示晶片": "NVIDIA GeForce RTX 5070 Ti Laptop GPU, 12GB GDDR7, 140W Maximum Graphics Power with Dynamic Boost. AI Boost: 1962 MHz (1762 MHz Boost Clock + 200 MHz OC). May vary by scenario."
+      }
+    }
+  ]
+}

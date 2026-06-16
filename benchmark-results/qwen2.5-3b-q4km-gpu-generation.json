@@ -1,0 +1,119 @@
+﻿{
+  "cases": 6,
+  "rows": [
+    {
+      "question": "BYH 的顯卡和 VRAM 是多少？",
+      "answer": "- 显卡: NVIDIA GeForce RTX 5080 Laptop GPU\n- VRAM: 16GB GDDR7",
+      "metrics": {
+        "question": "BYH 的顯卡和 VRAM 是多少？",
+        "retrieved_doc_ids": [
+          "aorus-master-16-byh::顯示晶片",
+          "aorus-master-16-byh::顯示器",
+          "aorus-master-16-byh::作業系統",
+          "aorus-master-16-byh::音效",
+          "aorus-master-16-byh::中央處理器"
+        ],
+        "ttft_seconds": 0.4161422997713089,
+        "total_seconds": 0.7511349995620549,
+        "generated_tokens": 28,
+        "tokens_per_second": 83.5839109851954,
+        "answer_chars": 59
+      }
+    },
+    {
+      "question": "Which model has RTX 5070 Ti and what is its maximum graphics power?",
+      "answer": "- RTX 5070 Ti model: AORUS MASTER 16 BZH\n- Maximum Graphics Power: 140W",
+      "metrics": {
+        "question": "Which model has RTX 5070 Ti and what is its maximum graphics power?",
+        "retrieved_doc_ids": [
+          "aorus-master-16-bzh::顯示晶片",
+          "aorus-master-16-bzh::summary",
+          "aorus-master-16-bzh::變壓器",
+          "aorus-master-16-bzh::電池",
+          "aorus-master-16-bzh::視訊鏡頭"
+        ],
+        "ttft_seconds": 0.29599460028111935,
+        "total_seconds": 0.6611136998981237,
+        "generated_tokens": 31,
+        "tokens_per_second": 84.90380271127361,
+        "answer_chars": 71
+      }
+    },
+    {
+      "question": "這台筆電的螢幕解析度、更新率與亮度是多少？",
+      "answer": "- 螢幕解析度: WQXGA (2560x1600)\n- 更新率: 240Hz\n- 亮度: 500 nits peak",
+      "metrics": {
+        "question": "這台筆電的螢幕解析度、更新率與亮度是多少？",
+        "retrieved_doc_ids": [
+          "aorus-master-16-bxh::顯示器",
+          "aorus-master-16-byh::顯示器",
+          "aorus-master-16-bzh::顯示器",
+          "aorus-master-16-bxh::電池",
+          "aorus-master-16-byh::電池"
+        ],
+        "ttft_seconds": 0.3088396000675857,
+        "total_seconds": 0.8246984998695552,
+        "generated_tokens": 44,
+        "tokens_per_second": 85.29464164889069,
+        "answer_chars": 59
+      }
+    },
+    {
+      "question": "How many Thunderbolt ports are listed and which versions are they?",
+      "answer": "- Thunderbolt 5 on the left side of BXH model\n- Thunderbolt 4 on the right side of BXH model\n- Thunderbolt 4 on the right side of BYH model",
+      "metrics": {
+        "question": "How many Thunderbolt ports are listed and which versions are they?",
+        "retrieved_doc_ids": [
+          "aorus-master-16-bxh::連接埠",
+          "aorus-master-16-byh::連接埠",
+          "aorus-master-16-bzh::連接埠",
+          "aorus-master-16-bxh::重量",
+          "aorus-master-16-byh::重量"
+        ],
+        "ttft_seconds": 0.3362193997018039,
+        "total_seconds": 0.8269273997284472,
+        "generated_tokens": 41,
+        "tokens_per_second": 83.55274419364241,
+        "answer_chars": 139
+      }
+    },
+    {
+      "question": "電池容量和變壓器瓦數？",
+      "answer": "- 電池容量: 99Wh\n- 变压器瓦数: 330W",
+      "metrics": {
+        "question": "電池容量和變壓器瓦數？",
+        "retrieved_doc_ids": [
+          "aorus-master-16-bxh::變壓器",
+          "aorus-master-16-byh::變壓器",
+          "aorus-master-16-bzh::變壓器",
+          "aorus-master-16-bxh::電池",
+          "aorus-master-16-byh::電池"
+        ],
+        "ttft_seconds": 0.21585539961233735,
+        "total_seconds": 0.5050935000181198,
+        "generated_tokens": 25,
+        "tokens_per_second": 86.433979357929,
+        "answer_chars": 26
+      }
+    },
+    {
+      "question": "Compare BXH, BYH and BZH GPU memory.",
+      "answer": "- BXH: 24GB GDDR7\n- BYH: 16GB GDDR7\n- BZH: 12GB GDDR7",
+      "metrics": {
+        "question": "Compare BXH, BYH and BZH GPU memory.",
+        "retrieved_doc_ids": [
+          "aorus-master-16-bxh::顯示晶片",
+          "aorus-master-16-byh::顯示晶片",
+          "aorus-master-16-bzh::顯示晶片",
+          "aorus-master-16-byh::summary",
+          "aorus-master-16-bxh::summary"
+        ],
+        "ttft_seconds": 0.3950118999928236,
+        "total_seconds": 0.8167830999009311,
+        "generated_tokens": 35,
+        "tokens_per_second": 82.98338058081147,
+        "answer_chars": 53
+      }
+    }
+  ]
+}
